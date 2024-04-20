@@ -18,7 +18,7 @@ public class Utility {
 		String location = ".\\src\\in\\pwskills\\neeraj\\properties\\database.properties";
 		File file = new File(location);
 		System.out.println(file);
-		
+
 		try {
 			properties.load(new FileInputStream(file));
 		} catch (FileNotFoundException e) {
@@ -27,7 +27,6 @@ public class Utility {
 			e.printStackTrace();
 		}
 
-		
 		System.out.println(properties);
 		return properties;
 	}
@@ -73,5 +72,13 @@ public class Utility {
 
 		return sqlDate;
 	}
+
+	public static int getSumOfArray(int[] executeBatch) {
+		int sum = 0;
+
+		for (int element : executeBatch) {
+			sum += element;
+		}
+		return sum;
+	}
 }
-	
