@@ -28,12 +28,16 @@ public class GetAndCloseConnection {
 	}
 
 	public static void displayConnection(ArrayList<Connection> connections) {
-		int i = 0;
+		if (connections.size() == 0) {
+			System.out.println("No Object is Available !");
+			return;
+		}
 
+		int i = 0;
 		for (Connection connection : connections) {
 			System.out.println(i++ + "  :  " + connection.hashCode());
 		}
-		
+
 		System.out.println();
 	}
 }
